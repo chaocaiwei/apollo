@@ -1,0 +1,52 @@
+VERSION "created by canmatrix"
+
+
+NS_ :
+
+BS_:
+
+BU_: Host_Node Chassis_Node 
+
+
+BO_ 1 Speed_Angle_Command: 8 Host_Node
+ SG_ Byte0 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ LinearSpeed : 16|16@1- (1,0) [-32768|32767] "mm/s" Vector__XXX
+ SG_ SteeringAngle : 32|16@1- (0.01000000000000000020816681711721685132943093776702880859375,0) [-327.6800000000000068212102633|327.6700000000000068210020965] "degree" Vector__XXX
+
+BO_ 1 Software_Emergency_Stop: 8 Host_Node
+ SG_ Byte0 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ EmergencyStop : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1 Clear_Collision_Status: 8 Host_Node
+ SG_ Byte0 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ClearCollision : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 1 Clear_Error_Status: 8 Host_Node
+ SG_ Byte0 : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ Byte1 : 8|8@1+ (1,0) [0|255] "" Vector__XXX
+ SG_ ClearError : 16|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 16 Speed_Feedback: 8 Chassis_Node
+ SG_ LinearSpeedFeedback : 0|16@1- (1,0) [-32768|32767] "mm/s" Vector__XXX
+ SG_ SteeringAngleFeedback : 16|16@1- (0.01000000000000000020816681711721685132943093776702880859375,0) [-327.6800000000000068212102633|327.6700000000000068210020965] "degree" Vector__XXX
+
+BO_ 17 Wheel_Speed_Feedback: 8 Chassis_Node
+ SG_ WheelSpeed : 0|16@1- (1,0) [-32768|32767] "rpm" Vector__XXX
+
+BO_ 18 Current_Feedback: 8 Chassis_Node
+ SG_ MotorCurrent : 0|16@1- (0.1000000000000000055511151231257827021181583404541015625,0) [-3276.800000000000181898940355|3276.700000000000181893389239] "A" Vector__XXX
+
+BO_ 32 Motor_Fault_Status: 8 Chassis_Node
+ SG_ FaultCode : 0|8@1+ (1,0) [0|255] "" Vector__XXX
+
+
+
+
+
+
+
+
+

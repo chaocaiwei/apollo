@@ -1,0 +1,47 @@
+syntax = "proto2";
+
+package apollo.canbus;
+
+message Clear_error_status_1 {
+// Control Message
+  // [] [0|255]
+  optional int32 byte0 = 1;
+  // [] [0|255]
+  optional int32 byte1 = 2;
+  // [] [0|255]
+  optional int32 clearerror = 3;
+}
+
+message Speed_feedback_10 {
+// Report Message
+  // [mm/s] [-32768|32767]
+  optional int32 linearspeedfeedback = 1;
+  // [degree] [-327.6800000000000068212102633|327.6700000000000068210020965]
+  optional double steeringanglefeedback = 2;
+}
+
+message Wheel_speed_feedback_11 {
+// Report Message
+  // [rpm] [-32768|32767]
+  optional int32 wheelspeed = 1;
+}
+
+message Current_feedback_12 {
+// Report Message
+  // [A] [-3276.800000000000181898940355|3276.700000000000181893389239]
+  optional double motorcurrent = 1;
+}
+
+message Motor_fault_status_20 {
+// Report Message
+  // [] [0|255]
+  optional int32 faultcode = 1;
+}
+
+message Mt {
+  optional Clear_error_status_1 clear_error_status_1 = 1; // control message
+  optional Speed_feedback_10 speed_feedback_10 = 2; // report message
+  optional Wheel_speed_feedback_11 wheel_speed_feedback_11 = 3; // report message
+  optional Current_feedback_12 current_feedback_12 = 4; // report message
+  optional Motor_fault_status_20 motor_fault_status_20 = 5; // report message
+}

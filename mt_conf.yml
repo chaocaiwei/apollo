@@ -1,0 +1,112 @@
+car_type: mt
+protocols:
+  '1':
+    id: '1'
+    name: clear_error_status_1
+    protocol_type: control
+    sender: Host_Node
+    vars:
+    - bit: 0
+      is_signed_var: false
+      len: 8
+      name: Byte0
+      offset: 0.0
+      order: intel
+      physical_range: '[0|255]'
+      physical_unit: ''
+      precision: 1.0
+      type: int
+    - bit: 8
+      is_signed_var: false
+      len: 8
+      name: Byte1
+      offset: 0.0
+      order: intel
+      physical_range: '[0|255]'
+      physical_unit: ''
+      precision: 1.0
+      type: int
+    - bit: 16
+      is_signed_var: false
+      len: 8
+      name: ClearError
+      offset: 0.0
+      order: intel
+      physical_range: '[0|255]'
+      physical_unit: ''
+      precision: 1.0
+      type: int
+  '10':
+    id: '10'
+    name: speed_feedback_10
+    protocol_type: report
+    sender: Chassis_Node
+    vars:
+    - bit: 0
+      is_signed_var: true
+      len: 16
+      name: LinearSpeedFeedback
+      offset: 0.0
+      order: intel
+      physical_range: '[-32768|32767]'
+      physical_unit: mm/s
+      precision: 1.0
+      type: int
+    - bit: 16
+      is_signed_var: true
+      len: 16
+      name: SteeringAngleFeedback
+      offset: 0.0
+      order: intel
+      physical_range: '[-327.6800000000000068212102633|327.6700000000000068210020965]'
+      physical_unit: degree
+      precision: 0.01
+      type: double
+  '11':
+    id: '11'
+    name: wheel_speed_feedback_11
+    protocol_type: report
+    sender: Chassis_Node
+    vars:
+    - bit: 0
+      is_signed_var: true
+      len: 16
+      name: WheelSpeed
+      offset: 0.0
+      order: intel
+      physical_range: '[-32768|32767]'
+      physical_unit: rpm
+      precision: 1.0
+      type: int
+  '12':
+    id: '12'
+    name: current_feedback_12
+    protocol_type: report
+    sender: Chassis_Node
+    vars:
+    - bit: 0
+      is_signed_var: true
+      len: 16
+      name: MotorCurrent
+      offset: 0.0
+      order: intel
+      physical_range: '[-3276.800000000000181898940355|3276.700000000000181893389239]'
+      physical_unit: A
+      precision: 0.1
+      type: double
+  '20':
+    id: '20'
+    name: motor_fault_status_20
+    protocol_type: report
+    sender: Chassis_Node
+    vars:
+    - bit: 0
+      is_signed_var: false
+      len: 8
+      name: FaultCode
+      offset: 0.0
+      order: intel
+      physical_range: '[0|255]'
+      physical_unit: ''
+      precision: 1.0
+      type: int

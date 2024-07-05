@@ -1,0 +1,17 @@
+dbc_file: mt.dbc
+
+protocol_conf: mt_conf.yml
+
+car_type: mt
+
+sender_list: []
+
+sender: Host_Node
+
+black_list: []
+
+use_demo_dbc: false
+
+output_dir: /apollo_workspace/modules/canbus_vehicle
+
+output_canbus_conf_dir: /apollo_workspace/output
